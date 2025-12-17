@@ -111,3 +111,54 @@ let store4 = "Hey its deepak sharma - Todays date is 14 December 2025"
 console.log(store4.split("-")) //Arrays with two elements
 console.log(store4.split()) // returned array will contain the whole string in index [0]
 console.log(store4.split("",)) //the returned array will be an array of single characters
+
+
+// String Search Methods
+// String indexOf() -The indexOf() method returns the index (position) of the first occurrence of a string in a string, or it returns -1 if the string is not found:
+let store5 = "It’s the year 2025 and a lovely December of the year."
+console.log(store5.indexOf('l')) 
+
+// String lastIndexOf() - returns the index of the last occurrence of a specified text in a string:
+console.log(store5.lastIndexOf("e"))
+console.log(store5.lastIndexOf("x")) //Both indexOf(), and lastIndexOf() return -1 if the text is not found:
+
+// Both methods accept a second parameter as the starting position for the search:
+console.log(store5.indexOf("year",14))
+console.log(store5.lastIndexOf("year",15))
+
+
+//* String search - searches a string for a string (or a regular expression) and returns the position of the match:
+console.log(store5.search("year")) 
+console.log(store5.search(/lovely/))
+
+// NOTE
+/*
+The two methods are NOT equal. These are the differences:
+- The search() method cannot take a second start position argument.
+- The indexOf() method cannot take powerful search values (regular expressions).
+*/
+
+
+//String match - returns an array containing the results of matching a string against a string (or a regular expression).
+console.log(store5.match("year"))
+console.log(store5.match(/year/g))
+console.log(store5.match(/Year/gi))
+
+// String matchAll() - returns an iterator containing the results of matching a string against a string (or a regular expression).
+for(const match of store5.matchAll(/year/g))
+{
+    console.log(match)
+}
+
+
+//String includes - returns true if a string contains a specified value.
+console.log(store5.includes("year"))
+console.log(store5.includes("year",10))
+
+
+// String startsWith()
+console.log(store5.startsWith("It"))
+
+//String endsWith()
+console.log(store5.endsWith("."))
+
