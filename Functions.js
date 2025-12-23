@@ -73,3 +73,19 @@ A function expression can be assigned to a variable, passed as an argument to an
 const x = function (a, b) { return a + b }; //Assigned to  variable 
 let z = x(4, 6) //Using variable as a function
 console.log(z)
+
+
+//Arrow Function Expression
+//Arrow Functions allow a shorter syntax for function expressions.
+//You can skip the function keyword, the return keyword, and the curly brackets:
+
+function multi(p1, p2) { return p1 * p2 }; //Normal Function
+console.log(multi(4, 5))
+
+let x1 = function (p1, p2) { return p1 * p2 }; //Anonymous function
+let x1Value = x1(2, 1)
+console.log(x1Value)
+
+let x2 = (p1, p2) => p1 * p2; //Arrow Fuction - Reduced Anonymous Function
+let x2Value = x2(4, 8)
+console.log(x2Value)
