@@ -74,6 +74,7 @@ let company = {
 console.log(company.companyFullInfo())
 
 
+
 //Object Constructor Functions
 //Sometimes we need to create many objects of the same type.
 //To create an object type we use an object constructor function.
@@ -90,5 +91,105 @@ const chandivali = new Branch(1838, "01", "13")
 
 console.log("The Branch is " + powai.unitNo)
 console.log("The branch is " + chandivali.unitNo)
+
+
+
+//Accessing JS Properties
+const prop1 = {
+    name: "Deepak",
+    lname: "Sharma",
+    age: 29,
+    city: "Mumabi",
+    country: "India"
+}
+
+//Different ways to access the property values
+console.log(prop1.name) //1
+console.log(prop1["name"]) //2
+let x = "name" //3
+console.log(prop1[x])
+console.log(prop1.country)
+
+
+//add property
+//objectName.propertyName = "propertyValue"
+prop1.occupation = "Test engineer"
+console.log(prop1.occupation)
+
+//delete property
+delete prop1.occupation
+console.log(prop1.occupation)
+
+
+//Nested Objects - Object inside of an object
+const prop2 = {
+    name: "Deepak",
+    lname: 'Sharma',
+    age: 29,
+    cars: {
+        car1: "BMW",
+        car2: "Mercedes",
+        car3: "Audi"
+    }
+}
+
+
+//Accessing object values
+console.log(prop2.cars.car1)
+console.log(prop2.cars["car2"])
+console.log(prop2['cars']['car3'])
+let x1 = "cars"
+let x2 = "car3"
+console.log(prop2[x1][x2])
+
+
+//Adding a new method inside of an object
+const prop3 = {
+    name: "Deepak",
+    lname: "Sharma",
+    age: 29
+}
+prop3.cars = function () { //Adding a new method inside an object
+    return ("Hey its Deepak").toUpperCase()
+}
+console.log(prop3.cars())
+
+
+//Display Objects in different ways
+const prop4 = {
+    fname: "Deepak",
+    lname: "Sharma",
+    age: 29,
+    city: "Mumbai"
+}
+
+console.log(prop4)
+
+//By property name
+console.log(prop4.fname)
+
+//By for loop
+let f1 = "";
+for (f1 in prop4) {
+    let value = prop4[f1]
+    console.log(value)
+}
+
+//Using Object.values - String values in an Array
+const myArrays = Object.values(prop4)
+let myValue = myArrays.toString()
+console.log(myValue)
+
+
+//Object.entries() makes it simple to use objects in loops
+let myEntry = ""
+for (let [key, value] of Object.entries(prop4)) {
+    myEntry = key + ":" + value
+    console.log(myEntry)
+}
+
+
+//JSON.stringify()
+console.log(JSON.stringify(prop4))
 
 
