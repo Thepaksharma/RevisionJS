@@ -1,0 +1,44 @@
+//Global Scope
+//If the variable is present outside of the block or function its is Globally scopped
+
+let x = "Global"
+console.log(x)
+
+//Can be accessed inside the function 
+function myFunction(s1) { //Parameter
+    console.log(x)
+}
+myFunction(x) //Argument
+
+//Can be accessed inside the block
+{
+    console.log(x)
+}
+
+
+//Function Scope
+//If the variable is defined inside of the function then it cannot be accessed outside
+
+//Create a function
+function myFunction1() {
+    var insideFunction = "Inside a function"
+    console.log(insideFunction)
+}
+myFunction1() //Invoking or Calling a function
+
+//Calling outside of a function using script
+//console.log(insideFunction) // ReferenceError: insideFunction is not defined
+
+//Using Block of code
+// {
+//     console.log(insideFunction) //ReferenceError: insideFunction is not defined
+// }
+
+
+//Block Scope 
+//Value of let and const variables cant be accessed outside of a block except var keyword value 
+
+{
+    let x =5
+}
+console.log(x)
