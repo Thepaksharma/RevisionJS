@@ -16,6 +16,8 @@ myFunction(x) //Argument
 }
 
 
+//-------------------------------------------------------------------------------------------
+
 //Function Scope
 //If the variable is defined inside of the function then it cannot be accessed outside
 
@@ -35,10 +37,104 @@ myFunction1() //Invoking or Calling a function
 // }
 
 
-//Block Scope 
-//Value of let and const variables cant be accessed outside of a block except var keyword value 
+//-------------------------------------------------------------------------------------------
+//Block Scope
+//Only applicable for let and const keywords if they are declred inside of a block {}
+//Value of let and const variables cant be accessed outside of a block except var keyword value
 
+
+//let variable inside the block and can be accessed outside as its let - Block scope applies
+// {
+//     let insideBlock = 5  //ReferenceError: insideBlock is not defined
+// }
+// console.log(insideBlock)
+
+
+
+
+//Const variable inside the blaock and cant be accessed outsode as it const - Block scope applies
+// {
+//     const insideBlockConst = 6; //ReferenceError: insideBlockConst is not defined
+// }
+// console.log(insideBlockConst)
+
+
+//Var inside of a block - This can be accessed outside as its var keyword - No block scope for var
 {
-    let x =5
+    var insideBlockVar = 7
 }
-console.log(x)
+console.log(insideBlockVar)
+
+
+
+//-------------------------------------------------------------------------------------------
+//JS Hoisting 
+
+//Var hositing - Declaration after print
+h1 = "Hoisting"; //Assignement
+console.log(h1)
+var h1 //Declaration
+
+
+
+// let hoisting
+// The variable will be hoisted but its value will NOT be initialized, so it goes into the Temporal Dead Zone (TDZ)
+
+// Example
+// h3 = "Hoisting 3"        // Assignment before declaration
+// console.log(h3)          // ❌ ReferenceError: Cannot access 'h3' before initialization
+// let h3                   // Declaration (enters TDZ until this line executes)
+
+// Brief explanation
+// 1. let h3 -> Hoisting happens, but the variable is in TDZ
+//    - TDZ = variable exists in memory but is "locked"
+//    - Cannot read or write before declaration line
+// 2. Any access (read/write) before declaration throws ReferenceError
+// 3. Once 'let h3' is executed, TDZ ends and variable can be assigned and accessed
+// 4. Now, h3 = "Hoisting 3" is valid
+// 5. console.log(h3) will print "Hoisting 3"
+
+// Correct usage
+let h3;            // Declaration (TDZ ends here)
+h3 = "Hoisting 3"; // Assignment
+console.log(h3);   // Output: "Hoisting 3"
+
+
+//Const Hoisting
+// h4 = "Hoisting 4" 
+// console.log(h4) // SyntaxError: Missing initializer in const declaration
+// const h4          // ❌ Error: const must be initialized
+
+
+// Correct version 
+// console.log(h4)      // ❌ ReferenceError (TDZ)
+// const h4 = "Hoisting 4"; // Declaration + Initialization
+
+
+
+//JavaScript Initializations are Not Hoisted
+
+var i1 = "Intial1"
+var i2 = "Initial2"
+console.log(i1 + " " + i2)
+
+
+var i3 = "Intial 3"
+console.log(i3 + " " + i4)
+var i4 = "Intial 4" //Undefined error 
+
+
+console.log(data)
+const data = "Data"
+
+// Summary
+// `var`, `let`, and `const` declarations are hoisted
+// `let` and `const` are hoisted but not initialized (Temporal Dead Zone)
+// Initialization is NOT hoisted for `var`, `let`, or `const`
+
+
+// | Keyword | Hoisted? | Initialized?      | TDZ?   | Access before declaration  |
+// | ------- | -------- | --------------    | -----  | -------------------------  |
+// | `var`   | ✅ Yes    | ✅ To undefined | ❌ No  | Prints undefined          |
+// | `let`   | ✅ Yes    | ❌ No           | ✅ Yes | ReferenceError            |
+// | `const` | ✅ Yes    | ❌ No           | ✅ Yes | ReferenceError            |
