@@ -124,8 +124,8 @@ console.log(i3 + " " + i4)
 var i4 = "Intial 4" //Undefined error 
 
 
-console.log(data)
-const data = "Data"
+// console.log(data)
+// const data = "Data"
 
 // Summary
 // `var`, `let`, and `const` declarations are hoisted
@@ -138,3 +138,17 @@ const data = "Data"
 // | `var`   | ✅ Yes    | ✅ To undefined | ❌ No  | Prints undefined          |
 // | `let`   | ✅ Yes    | ❌ No           | ✅ Yes | ReferenceError            |
 // | `const` | ✅ Yes    | ❌ No           | ✅ Yes | ReferenceError            |
+
+
+
+//Use strict
+//Strict mode is declared by adding "use strict"; to the beginning of a script or a function.
+//Declared at the beginning of a script, it has global scope (all code in the script will execute in strict mode):
+//With strict mode, you can not, for example, use undeclared variables
+
+"use strict";
+function strFunction() {
+    str = 10 //Error - In vs we are not able to get the error :) 
+    console.log(str)
+}
+strFunction()
