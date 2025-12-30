@@ -1,3 +1,5 @@
+//Creating Date Objects
+
 const date = new Date()
 console.log(date)
 
@@ -40,6 +42,8 @@ console.log(previousCentury1)
 const milli = new Date(100000000000)
 console.log(milli)
 
+
+//-----------------------------------------------------------------
 //Displaying Dates
 const displayDate = new Date(2025, 11, 28, 16, 15, 10, 100)
 console.log(displayDate.toString())
@@ -80,6 +84,9 @@ console.log(dateGet.getTime())
 
 
 //-----------------------------------------------------------------
+//Set Date methods let you set date values (years, months, days, hours, minutes, seconds, milliseconds) for a Date Object.
+
+
 // Method	            Description
 // setDate()	        Set the day as a number (1-31)
 // setFullYear()	    Set the year (yyyy)
@@ -122,10 +129,9 @@ const todayDate = new Date()
 const someDate = new Date()
 someDate.setFullYear(2026)
 console.log(someDate)
-if(todayDate > someDate)
-{
+if (todayDate > someDate) {
     console.log("todayDate is greater than someDate")
 }
-else{
+else {
     console.log("Somedate is greater than todayDate")
 }
