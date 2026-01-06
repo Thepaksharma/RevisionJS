@@ -37,7 +37,7 @@ console.log(typeof (cars4)) //Shows as an object
 
 
 //Arrays properties and methods
-console.log(cars.length) //Alwatys give 1 extra number
+console.log(cars.length) //Always gives 1 extra number
 console.log(cars.sort()) //Sorts in alphbetical order
 
 //The length property
@@ -53,9 +53,8 @@ for (let i = 0; i < cars5.length; i++) {
 }
 
 //Enhanced for loop
-for(let value1 of cars5)
-{
-    console.log("USing enhanced for loop "+ value1)
+for (let value1 of cars5) {
+    console.log("USing enhanced for loop " + value1)
 }
 
 //forEach()
@@ -76,3 +75,29 @@ console.log(cars5.toString())
 //Adding elements with high indexes can create undefined "holes" in an array:
 cars5[8] = "Tesla"
 console.log(cars5)
+
+
+//Associative arrays are not allowed in Array
+// const person = [];
+// person["firstName"] = "John";
+// person["lastName"] = "Doe";
+// person["age"] = 46;
+// person.length;     // Will return 0
+// person[0];         // Will return undefined
+
+
+// The Difference Between Arrays and Objects
+// In JavaScript, arrays use numbered indexes.  
+// In JavaScript, objects use named indexes.
+
+//Nested Arrays
+const myObject = {
+    name: "Deepak",
+    City: "Newcastle",
+    car: [
+        { carName: "BMW", Colors: ["Red", "Blue", "Black"] },
+        { carName: "Audi", Colors: ["Black", "White", "Yellow"] }
+    ]
+}
+
+console.log(myObject.car[1].carName)
