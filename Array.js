@@ -101,3 +101,118 @@ const myObject = {
 }
 
 console.log(myObject.car[1].carName)
+
+
+
+//JavaScript Methods
+//length - The length property returns the length (size) of an array:
+const fruits = ["Banana", "Mango", "Grapes", "Oranges"]
+console.log(fruits.length)
+
+//Setting the length of the array as 2
+fruits.length = 2;
+for (let fruit1 of fruits) {
+    console.log("after setting the lemgth as 2 " + fruit1)
+}
+
+fruits.length = 3;
+let fruit2;
+fruits.forEach(fruitFunction)
+function fruitFunction(fruit2) {
+    console.log("After setting the length as 3 " + fruit2)
+}
+
+//Length helps us to add an array element in an array
+fruits[fruits.length] = "Pineapple"
+
+for (let fruitItem of fruits) {
+    console.log(fruitItem)
+}
+
+const fruits2 = ["Mango", "Pineapple", "Banana", "Apple", "Strawberry"]
+
+//toStriing() - The toString() method returns the elements of an array as a comma separated string.
+console.log(fruits2.toString())
+
+// Every JavaScript object has a toString() method.
+// The toString() method is used internally by JavaScript when an object needs to be displayed as a text (like in HTML), or when an object needs to be used as a string.
+
+
+//---------------------------------------------------------
+//at()
+// The at() method returns an indexed element from an array.
+// The at() method returns the same as [].
+console.log(fruits2.at(2))
+console.log(fruits2.at(-1))
+
+// Note
+// Many languages allow negative bracket indexing like [-1] to access elements from the end of an object / array / string.
+// This is not possible in JavaScript, because [] is used for accessing both arrays and objects. obj[-1] refers to the value of key -1, not to the last property of the object.
+// The at() method was introduced in ES2022 to solve this problem.
+
+//---------------------------------------------------------
+//join()
+console.log(fruits2.join(" x "))
+
+//pop() - The pop() method removes the last element from an array:
+//The pop() method returns the value that was "popped out":
+console.log(fruits2.pop())
+
+//push() - The push() method adds a new element to an array (at the end):
+//The push() method returns the new array length:
+console.log(fruits2.push("Watermelon"))
+
+//shift() - The shift() method removes the first array element and "shifts" all other elements to a lower index.
+//The shift() method returns the value that was "shifted out"
+console.log(fruits2.shift())
+
+//unshift() - The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:
+//The unshift() method returns the new array length:
+fruits2.unshift("Lemon")
+console.log(fruits2.unshift("Pear"))
+
+//Array.isArray() - Checks if its arrays or not  - returns boolean
+console.log(Array.isArray(fruits2))
+
+//delete() - Using delete() leaves undefined holes in the array.
+//Use pop() or shift() instead.
+delete fruits2[0]
+
+for (let fruitValues of fruits2) {
+    console.log(fruitValues)
+}
+
+//concat two arrays
+const myBoys = ["Amit", "Jitu", "Sagar"]
+const myGirls = ["Pavi", "Ravi", "Appu"]
+const family = myBoys.concat(myGirls)
+for (let fam of family) {
+    console.log(fam)
+}
+
+//concat with multiple arrays
+const myCity = ["Mumbai", "Newcastle", "Delhi"]
+const details = myBoys.concat(myGirls, myCity)
+for (let fullDetails of details) {
+    console.log(fullDetails)
+}
+
+//concat with single string
+const concatString = myBoys.concat("Conacting with a string")
+for (let conString of concatString) {
+    console.log(conString)
+}
+
+// Note 
+// The concat() method does not change the existing arrays. It always returns a new array.
+// The concat() method can take any number of array arguments.
+// The concat() method can also take strings as arguments:
+
+
+//copyWithin()
+let val
+fruits2.forEach(frtFunction)
+function frtFunction(val) {
+    console.log("Values are " + val)
+}
+
