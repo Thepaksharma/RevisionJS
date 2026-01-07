@@ -269,8 +269,37 @@ console.log(myCities)
 // The slice() method creates a new array.
 // The slice() method does not remove any elements from the source array.
 
-const sortCity = ukCities.slice(1,3)
+const sortCity = ukCities.slice(1, 3)
 console.log(sortCity)
 
 const sliceCity = ukCities.slice(3)
 console.log(sliceCity)
+
+
+
+//Revision
+const rev = ["UK", "USA", "INDIA", "CHINA", "RUSSIA"]
+console.log(rev.length)
+console.log(rev.toString())
+console.log(rev.at(2))
+console.log(rev.join(" x "))
+console.log(rev.pop()) //Returns deleted from last place
+console.log(rev.push("RUSSIA")) //Returns length
+console.log(rev.shift("Afganistan")) //Removes frist element
+console.log(rev.unshift("UK"))
+console.log(Array.isArray(rev))
+// delete rev[1]  //Delete leaves holes in the Array
+console.log(rev)
+const rev2 = ["Mumbai", "Chennai", 'Bangalore', "Delhi"]
+const revFull = rev.concat(rev2)
+console.log(revFull.toString())
+console.log(revFull.copyWithin(1, 5, 6).toString())
+const revFlat = [[1, 2], [3, 4], [5, 6, 7], [8]]
+console.log(revFlat.flat())
+console.log(revFull.toString())
+console.log(revFull.slice(2))
+revFull.splice(1, 0, "Ahemdabad") //alters the same array
+console.log(revFull.toString())
+console.log(revFull.toSpliced(1, 0, "Jaipur")) //toSpliced creates a new array without touching the older array
+console.log(revFull.toString())
+//The difference between the new toSpliced() method and the old splice() method is that the new method creates a new array, keeping the original array unchanged, while the old method altered the original array.
