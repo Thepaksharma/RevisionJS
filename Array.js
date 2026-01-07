@@ -209,10 +209,68 @@ for (let conString of concatString) {
 // The concat() method can also take strings as arguments:
 
 
-//copyWithin()
-let val
-fruits2.forEach(frtFunction)
-function frtFunction(val) {
-    console.log("Values are " + val)
-}
+//copyWithin() - The copyWithin() method copies array elements to another position in an array:
 
+const fruits3 = ["Banana", "Mango", "Kiwi", "Pineapple", "Apple"]
+console.log(fruits3)
+fruits3.copyWithin(1, 3)
+console.log(fruits3)
+fruits3.copyWithin(0, 4)
+console.log(fruits3)
+fruits3.copyWithin(1, 0)
+console.log(fruits3)
+
+// Note
+// The copyWithin() method overwrites the existing values.
+// The copyWithin() method does not add items to the array.
+// The copyWithin() method does not change the length of the array.
+
+//flat()
+const myArr = [[1, 2], [3, 4], [5, 6]]
+console.log(myArr.flat())
+
+
+//Splice - The splice() method adds new items to an array.
+const fruits4 = ["Mango", "Kiwi", "Banana", "Apple", "Pineapple"]
+fruits4.splice(2, 0, "Honeydew")
+console.log(fruits4)
+
+// The first parameter (2) defines the position where new elements should be added (spliced in).
+// The second parameter (0) defines how many elements should be removed.
+// The rest of the parameters ("Honeydew") define the new elements to be added.
+
+fruits4.splice(2, 3, "Grapes", "Strawberry")
+console.log(fruits4)
+
+//Using splice() to Remove Elements
+fruits4.splice(0, 1)
+console.log(fruits4)
+
+fruits4.splice(0, 2)
+console.log(fruits4)
+
+const months = ["Jan", "Feb", "March", "April"]
+console.log(months)
+const splieMonth = months.toSpliced(0, 1)
+console.log(months)
+console.log(splieMonth)
+
+// Note 
+// ES2023 added the Array toSpliced() method as a safe way to splice an array without altering the original array.
+// The difference between the new toSpliced() method and the old splice() method is that the new method creates a new array, keeping the original array unchanged, while the old method altered the original array.
+
+
+//Slice() - The slice() method slices out a piece of an array into a new array:
+const ukCities = ["Newcastle", "Manchester", "Birmingham", "London", "Glassgow"]
+const myCities = ukCities.slice(1)
+console.log(myCities)
+
+//Note
+// The slice() method creates a new array.
+// The slice() method does not remove any elements from the source array.
+
+const sortCity = ukCities.slice(1,3)
+console.log(sortCity)
+
+const sliceCity = ukCities.slice(3)
+console.log(sliceCity)
