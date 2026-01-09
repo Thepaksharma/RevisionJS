@@ -56,3 +56,32 @@ console.log(numFind.findLast(resForFindLast))
 const resFindLastIndex = value => value < 18
 console.log(numFind.findLastIndex(resFindLastIndex))
 
+
+
+//ArraySearch Revision
+const revSearch = [2, 4, 5, 9, 8, 41, 52, 56, 12, NaN, 14, 19, 4, 16]
+console.log(revSearch.indexOf(4))
+console.log(revSearch.lastIndexOf(4))
+console.log(revSearch.includes(9))
+console.log(revSearch.includes(NaN))
+
+
+console.log(revSearch.find(serachFunction))
+function serachFunction(value) {
+    return value < 18
+}
+
+
+//findIndex() - Using function expression or arrow fucntion
+const resFun = value => value < 18
+console.log(revSearch.findIndex(resFun))
+
+
+//findlast() - Using functiojn expression or Arrow function
+const resfun2 = value => value < 18
+console.log(revSearch.findLast(resfun2))
+
+
+//findLastIndex() 
+const resfun3 = value => value < 18
+console.log(revSearch.findLastIndex(resfun3))
