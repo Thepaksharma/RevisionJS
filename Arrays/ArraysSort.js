@@ -1,3 +1,5 @@
+const { compileFunction } = require("vm")
+
 const names = ["Deepak", "Jitu", "Sunil", "Amit", "Ravi", "Gaurav", "Sagar", "Krishna", "Dinesh"]
 
 // Sorting an Array
@@ -30,4 +32,26 @@ console.log("Value is " + reversed)
 
 const numbers = [25, 84, 14, 57, 15, 5, 85, 1, 15]
 console.log(numbers.sort(function (a, b) { return a - b }))
-console.log(numbers.sort(function (a, b) {return b - a }))
+console.log(numbers.sort(function (a, b) { return b - a }))
+
+
+//Math.min() - Returns lowest number in an array
+// addinng 3 dots ... its called spread operator
+// if we use console.log(Math.min(numbers)) - this eill return Nan as MAth.min doesnt accepts Arrays - Its considers like console.log(Math.min([25, 84, 14, 57, 15, 5, 85, 1, 15]))
+//But if we use spread operator it opens the arrays and keep the values this - console.log(Math.min(25, 84, 14, 57, 15, 5, 85, 1, 15))
+console.log(Math.min(...numbers))
+
+//Math.max() - Returns highest number in an Array
+console.log(Math.max(...numbers))
+
+
+//Sorting Object Array
+
+const ObjArray = [
+    { car: "BMW", Year: 2016 },
+    { car: "AUdi", Year: 2020 },
+    { car: "Mercedes", Year: 2015 }
+]
+
+console.log(ObjArray.sort(function (a, b) { return a.Year - b.Year }))
+console.log(ObjArray.sort(function (a, b) { return b.Year - a.Year }))
