@@ -38,7 +38,7 @@ console.log(numbers.sort(function (a, b) { return b - a }))
 //Math.min() - Returns lowest number in an array
 // addinng 3 dots ... its called spread operator
 // if we use console.log(Math.min(numbers)) - this eill return Nan as MAth.min doesnt accepts Arrays - Its considers like console.log(Math.min([25, 84, 14, 57, 15, 5, 85, 1, 15]))
-//But if we use spread operator it opens the arrays and keep the values this - console.log(Math.min(25, 84, 14, 57, 15, 5, 85, 1, 15))
+//But if we use spread operator it opens the arrays and keep the values like this - console.log(Math.min(25, 84, 14, 57, 15, 5, 85, 1, 15))
 console.log(Math.min(...numbers))
 
 //Math.max() - Returns highest number in an Array
