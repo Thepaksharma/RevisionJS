@@ -20,7 +20,7 @@ function fruitFunction(fruitEach) {
     console.log(fruitEach)
 }
 
-//Advanced for each
+//Advanced for each using arrow function
 fruits.forEach(fruitEach => console.log(fruitEach))
 
 
