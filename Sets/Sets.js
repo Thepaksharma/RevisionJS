@@ -42,4 +42,11 @@ setExp.forEach(value => console.log("The set has " + value))
 //Sets are Objects
 console.log(typeof setExp)
 
+//InstanceOf
+//const deepak = new Set()
+//keyword setObject = new BluePrint()
+// An instance is simply a real object created from a class or blueprint.
+// Think of a blueprint as a plan or design.
+// When you make an actual object from that blueprint, that object is called an instance.
+
 console.log(setExp instanceof Set)
