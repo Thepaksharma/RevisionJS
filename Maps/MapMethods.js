@@ -110,6 +110,7 @@ console.log(data.get(obj1))
 
 
 //Map.groupBy()
+//Array creation
 // const fruit1 = [
 //     { name: "Banana", Quantity: 1500 },
 //     { name: "Apple", Quantity: 500 },
@@ -124,3 +125,79 @@ console.log(data.get(obj1))
 // //GroupBy
 // const results = Map.groupBy(fruit1, myFunction)
 // console.log(results)
+
+
+
+//----------------------------------------------------------------
+
+//Revision
+//New MAP
+const revMap = new Map()
+
+//To add and Changes Values use Set()
+revMap.set("name", "Deepak")
+revMap.set("Age", 29)
+revMap.set("City", "Mumbai")
+revMap.set("Nationality", "India")
+console.log(revMap)
+revMap.set("name", "Deepak Sharma")
+console.log(revMap)
+
+//Map.get()
+console.log(revMap.get("City"))
+
+//Map.size - this is property
+console.log(revMap.size)
+revMap.delete("name")
+console.log(revMap)
+
+//Map.clear()
+revMap.clear()
+console.log(revMap)
+
+//Map.has()
+const rev2 = new Map()
+rev2.set("First class", 52)
+rev2.set("Second Class", 45)
+rev2.set("Third Class", 84)
+rev2.set("Fourth class", 40)
+console.log(rev2)
+console.log(rev2.has("Third Class"))
+
+
+//forEach()
+rev2.forEach((value, key) => console.log(key, value))
+
+//Map.entries() - for ..of
+//Structured
+for (let x of rev2.entries()) {
+    console.log(x)
+}
+
+//Desturctured
+for (let [key, value] of rev2) {
+    console.log(key, value)
+}
+
+//Map.keys() - for ..of
+for (let x of rev2.keys()) {
+    console.log(x)
+}
+
+//Map.values() - for ..of
+for (let x of rev2.values()) {
+    console.log(x)
+}
+
+//Objects as keys
+const obj = new Map()
+const cust1 = { name: "Deepak", Role: "Tester" }
+const cust2 = { name: "Jitu", Role: "Developer" }
+const cust3 = { name: "Amit", Role: "Devops" }
+obj.set(cust1, 1500)
+obj.set(cust2, 2000)
+obj.set(cust3, 3000)
+console.log(obj)
+
+
+
