@@ -1,5 +1,14 @@
 const { Console } = require("console")
 
+
+// A Map stores key–value pairs, like an object, but with more power.
+
+// ✅ Why use Map instead of Object?
+// Keys can be any type (object, function, number, string)
+// Maintains insertion order
+// Better performance for frequent add/remove
+
+
 //Create a MAP and add values later using set
 const expMap = new Map()
 expMap.set("Sangharsh Nagar", "Shivsena - UBT")
