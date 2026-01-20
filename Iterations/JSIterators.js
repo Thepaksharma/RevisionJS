@@ -79,3 +79,5 @@ const graterNum = number.filter(x => x > 20)
 const iteratorLarge = graterNum[Symbol.iterator]()
 console.log(iteratorLarge.next())
 console.log(iteratorLarge.next())
+
+
