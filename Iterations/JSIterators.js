@@ -63,3 +63,19 @@ for (let value of arr) {
 // Returns	                Iterator	                    Iterator
 // Manual control	        ✅	                           ✅
 // Use case	                Old-school, traditional	        Modern, flexible, cleaner
+
+
+
+// Global rules
+// Thing	    Methods / Behavior
+// Array       .filter(), .map(), .forEach(), .reduce(), etc.
+// Iterator    .next() only
+// for...of     Works on any iterable or iterator
+
+
+//filter()
+const number = [10, 12, 14, 25, 35, 47, 56]
+const graterNum = number.filter(x => x > 20)
+const iteratorLarge = graterNum[Symbol.iterator]()
+console.log(iteratorLarge.next())
+console.log(iteratorLarge.next())
