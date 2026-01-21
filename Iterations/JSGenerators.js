@@ -20,7 +20,7 @@ for (let value of arr) {
 //Generator using for ..of
 function* genFromArray(arr) {
     for (let value of arr) {
-        yield value
+        yield value //logic created here
     }
 }
 const genItr = genFromArray(arr)
@@ -65,3 +65,17 @@ function* gen() {
 Think of it as:
 “Smart iterator written as a function
 */
+
+//Generator created
+function* calculateArrays(arr) {
+    for (let value of arr) {
+        yield value * 2
+    }
+}
+
+//Iterator created
+const calItr = calculateArrays(arr)
+console.log(calItr.next())
+console.log(calItr.next())
+console.log(calItr.next())
+console.log(calItr.next())
