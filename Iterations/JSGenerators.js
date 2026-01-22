@@ -79,3 +79,20 @@ console.log(calItr.next())
 console.log(calItr.next())
 console.log(calItr.next())
 console.log(calItr.next())
+
+
+
+//revision for generator
+
+const genExp = [1, 2, 3, 5, 6, 7, 89]
+
+function* gencheck(genExp) {
+    for (let value of genExp) {
+        yield value
+    }
+}
+
+const genIterator = gencheck(genExp)
+console.log(genIterator.next())
+console.log(genIterator.next())
+console.log(genIterator.next())
