@@ -89,3 +89,4 @@ console.log(x1Value)
 let x2 = (p1, p2) => p1 * p2; //Arrow Fuction - Reduced Anonymous Function
 let x2Value = x2(4, 8)
 console.log(x2Value)
+
