@@ -62,4 +62,31 @@ console.log("This is the shortest task to complete");
 
 
 
+//Revision 29/01/2026
+
+let myPromise3 = new Promise((resolve, reject) => {
+    //Promise created
+
+    //Logic with the wait
+    setTimeout(() => {
+        let value = true
+        if (value) {
+            resolve("This task is resolved .... Deepak")
+        }
+        else {
+            reject("Sorry this task is rejected")
+        }
+    }, 2000)
+
+})
+
+
+myPromise3
+    .then(result => {
+        console.log(result)
+    })
+    .catch(error => {
+        console.log(error)
+    }
+    )
 
